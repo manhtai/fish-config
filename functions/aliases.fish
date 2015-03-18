@@ -18,6 +18,12 @@ alias d="cd /data/Dropbox"
 alias p="cd /data/repos/dshs"
 alias g="git"
 
+# vim somethings
+alias er="vim /data/repos/dshs"
+alias ef="vim ~/.config/fish/functions/"
+alias ev="vim ~/.vimrc"
+alias et="vim ~/.tmux.conf"
+
 ################################
 ###  Program ShortCut
 ################################
@@ -27,6 +33,7 @@ alias undopush="git push -f origin HEAD^:master"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias ga="git add"
+alias gu="git add -A ;and git commit -am $1 ;and git push"
 alias gca="git commit -a -m"
 alias gcm="git commit -m"
 alias gbd="git branch -D"
@@ -46,6 +53,12 @@ alias gpom="git pull origin master"
 # turn on coloring on grep
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# sudo apt-get shortcut
+alias sai="sudo apt-get install"
+alias sau="sudo apt-get update"
+alias sap="sudo apt-get upgrade"
+
 
 # Quick check running state of a process
 alias psef="ps -ef | grep "
