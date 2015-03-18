@@ -20,13 +20,18 @@ alias g="git"
 
 # vim somethings
 alias er="vim /data/repos/dshs"
-alias ef="vim ~/.config/fish/functions/"
+alias ef="vim ~/.config/fish/functions/aliases.fish"
 alias ev="vim ~/.vimrc"
 alias et="vim ~/.tmux.conf"
 
 ################################
 ###  Program ShortCut
 ################################
+
+# tmux shortcut
+alias t="tmux"
+alias tl="tmux list-sessions"
+alias ta="tmux attach -t"
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"
@@ -62,5 +67,5 @@ alias sap="sudo apt-get upgrade"
 # Quick check running state of a process
 alias psef="ps -ef | grep "
 alias top="top -o cpu"
-alias ps="command ps -SAcr -o 'uid,pid,ppid,time,rss,command'"
+alias ps="command ps -Acr -o 'uid,pid,ppid,time,rss,command'"
 
