@@ -1,6 +1,7 @@
 alias ..="cd .."
 alias ...="cd ../.."
 alias -="cd -"
+alias q="exit"
 
 alias la="ls -Gla"
 
@@ -19,7 +20,6 @@ alias p="cd /data/repos/dshs"
 alias g="git"
 
 # vim somethings
-alias er="vim /data/repos/dshs"
 alias ef="vim ~/.config/fish/functions/aliases.fish"
 alias ev="vim ~/.vimrc"
 alias et="vim ~/.tmux.conf"
@@ -32,6 +32,13 @@ alias et="vim ~/.tmux.conf"
 alias t="tmux"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
+alias tp2="tmux new -s python2 -n REPL vifm \; splitw -v -p 33 -t 1 python2 \; splitw -h -p 40 -t 2 fish \; neww -n CMD fish \; selectw -t 1 \; selectp -t 1 \; attach"
+alias tp3="tmux new -s python3 -n REPL vifm \; splitw -v -p 33 -t 1 python3 \; splitw -h -p 40 -t 2 fish \; neww -n CMD fish \; selectw -t 1 \; selectp -t 1 \; attach"
+alias tli="tmux new -s lisp -n REPL vifm \; splitw -h -p 45 -t 1 ri \; splitw -v -p 33 -t 2 fish \; selectp -t 1 \; attach"
+alias tr="tmux new -s R -n REPL vifm \; splitw -v -p 33 -t 1 R \; splitw -h -p 40 -t 2 fish \; neww -n CMD fish \; selectw -t 1 \; selectp -t 1 \; attach"
+
+# racket interactive
+alias ri="racket -i -p neil/sicp -l xrepl"
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"
@@ -67,5 +74,4 @@ alias sap="sudo apt-get upgrade"
 # Quick check running state of a process
 alias psef="ps -ef | grep "
 alias top="top -o cpu"
-alias ps="command ps -Acr -o 'uid,pid,ppid,time,rss,command'"
 
