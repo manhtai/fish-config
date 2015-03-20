@@ -30,12 +30,10 @@ alias et="vim ~/.tmux.conf"
 
 # tmux shortcut
 alias t="tmux"
+alias tk="tmux kill-session"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
-alias tp2="tmux new -s python2 -n REPL fish \; splitw -v -p 33 -t 1 python2 \; splitw -h -p 40 -t 2 fish \; neww -n CMD fish \; neww -n ncmpcpp ncmpcpp \; selectw -t 1 \; selectp -t 1 \; attach"
-alias tp3="tmux new -s python3 -n REPL fish \; splitw -v -p 33 -t 1 python3 \; splitw -h -p 40 -t 2 fish \; neww -n CMD fish \; neww -n ncmpcpp ncmpcpp \; selectw -t 1 \; selectp -t 1 \; attach"
-alias tli="tmux new -s lisp -n REPL fish \; splitw -h -p 45 -t 1 ri \; splitw -v -p 33 -t 2 fish \; neww -n ncmpcpp ncmpcpp \; selectp -t 1 \; attach"
-alias tr="tmux new -s R -n REPL fish \; splitw -v -p 33 -t 1 R \; splitw -h -p 40 -t 2 fish \; neww -n CMD fish \; neww -n ncmpcpp ncmpcpp \; selectw -t 1 \; selectp -t 1 \; attach"
+alias tlisp="tmux new -s lisp -n REPL fish \; splitw -h -p 45 -t 1 ri \; splitw -v -p 33 -t 2 fish \; neww -n ncmpcpp ncmpcpp \; selectp -t 1 \; attach"
 
 # racket interactive
 alias ri="racket -i -p neil/sicp -l xrepl"
