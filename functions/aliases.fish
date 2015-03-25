@@ -33,7 +33,7 @@ alias t="tmux"
 alias tk="tmux kill-session"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
-alias tlisp="tmux new -s lisp -n REPL fish \; splitw -h -p 45 -t 1 ri \; splitw -v -p 33 -t 2 fish \; neww -n ncmpcpp ncmpcpp \; selectp -t 1 \; attach"
+alias ts="tmux new -s sicp -n racket 'cd /data/repos/dshs/course-sicp/excercises; fish; clear' \; splitw -h -p 45 -t 1 -c '/data/repos/dshs/course-sicp/excercises' ri \; selectp -t 1 \; attach"
 
 # racket interactive
 alias ri="racket -i -p neil/sicp -l xrepl"
@@ -67,7 +67,8 @@ alias egrep='egrep --color=auto'
 alias sai="sudo apt-get install"
 alias sau="sudo apt-get update"
 alias sap="sudo apt-get upgrade"
-
+alias sar="sudo apt-get remove"
+alias saa="sudo apt-get autoremove"
 
 # Quick check running state of a process
 alias psef="ps -ef | grep "
