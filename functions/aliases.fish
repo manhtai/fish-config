@@ -33,7 +33,6 @@ alias t="tmux"
 alias tk="tmux kill-session"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
-alias ts="tmux new -s sicp -n racket 'cd /data/repos/dshs/course-sicp/excercises; fish; clear' \; splitw -h -p 45 -t 1 -c '/data/repos/dshs/course-sicp/excercises' ri \; selectp -t 1 \; attach"
 
 # racket interactive
 alias ri="racket -i -p neil/sicp -l xrepl"
