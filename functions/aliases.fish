@@ -21,8 +21,11 @@ alias g="git"
 
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
-alias ev="vim ~/.vimrc"
+alias ev="vim ~/.vim/vimrc"
 alias et="vim ~/.tmux.conf"
+
+# mutt
+alias mut="cd /data/Downloads ; mutt"
 
 ################################
 ###  Program ShortCut
