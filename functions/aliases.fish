@@ -38,7 +38,7 @@ alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
 
 # racket interactive
-alias ri="racket -i -p neil/sicp -l xrepl"
+alias ri="racket -i -l xrepl"
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"
