@@ -1,20 +1,19 @@
-# https://github.com/sjl/z-fish/
 # maintains a jump-list of the directories you actually use
 #
 # INSTALL:
-# * put something like this in your config.fish:
-# . /path/to/z.fish
-# * put something like this in your fish_prompt function:
-# z --add "$PWD"
-# * cd around for a while to build up the db
-# * PROFIT!!
+#   * put something like this in your config.fish:
+#     . /path/to/z.fish
+#   * put something like this in your fish_prompt function:
+#       z --add "$PWD"
+#   * cd around for a while to build up the db
+#   * PROFIT!!
 #
 # USE:
-# * z foo # goes to most frecent dir matching foo
-# * z foo bar # goes to most frecent dir matching foo and bar
-# * z -r foo # goes to highest ranked dir matching foo
-# * z -t foo # goes to most recently accessed dir matching foo
-# * z -l foo # list all dirs matching foo (by frecency)
+#   * z foo     # goes to most frecent dir matching foo
+#   * z foo bar # goes to most frecent dir matching foo and bar
+#   * z -r foo  # goes to highest ranked dir matching foo
+#   * z -t foo  # goes to most recently accessed dir matching foo
+#   * z -l foo  # list all dirs matching foo (by frecency)
 
 function z -d "Jump to a recent directory."
     set -l datafile "$HOME/.z"
@@ -26,9 +25,9 @@ function z -d "Jump to a recent directory."
         # $HOME isn't worth matching
         [ "$argv" = "$HOME" ]; and return
 
-set -l tempfile (mktemp $datafile.XXXXXX)
-test -f $tempfile; or return
-
+		set -l tempfile (mktemp $datafile.XXXXXX)
+		test -f $tempfile; or return
+		
         # maintain the file
         awk -v path="$argv" -v now=(date +%s) -F"|" '
             BEGIN {
@@ -112,8 +111,8 @@ test -f $tempfile; or return
             # no file yet
             [ -f "$datafile" ]; or return
 
-set -l tempfile (mktemp $datafile.XXXXXX)
-test -f $tempfile; or return
+			set -l tempfile (mktemp $datafile.XXXXXX)
+			test -f $tempfile; or return
             set -l target (awk -v t=(date +%s) -v list="$list" -v typ="$typ" -v q="$fnd" -v tmpfl="$tempfile" -F"|" '
                 function frecent(rank, time) {
                     dx = t-time
@@ -183,14 +182,14 @@ test -f $tempfile; or return
             end
         end
     end
-end
+end	
 
 function __z_init -d 'Set up automatic population of the directory list for z'
-functions fish_prompt | grep -q 'z --add'
-if [ $status -gt 0 ]
-functions fish_prompt | sed -e '$ i\\
-z --add "$PWD"' | .
-end
+	functions fish_prompt | grep -q 'z --add'
+	if [ $status -gt 0 ]
+		functions fish_prompt | sed -e '$ i\\
+		z --add "$PWD"' | .
+	end
 end
 
 __z_init
