@@ -1,6 +1,8 @@
-# Config for configs
-. "$HOME/.config/fish/functions/export.fish"
-. "$HOME/.config/fish/functions/aliases.fish"
-. "$HOME/.config/fish/functions/utils.fish"
-. "$HOME/.config/fish/functions/z.fish"
-
+# The config for fish configs
+. "$HOME/.config/fish/functions/export.fish"      # As its name
+. "$HOME/.config/fish/functions/aliases.fish"     # Aliases for lazy men
+. "$HOME/.config/fish/functions/utils.fish"       # Some shits
+. "$HOME/.config/fish/functions/z.fish"           # Frequent folders
+. "$HOME/.config/fish/functions/fish_prompt.fish" # Colorful
+# Shut up fish!
+set fish_greeting ""

@@ -1,64 +1,61 @@
-set fish_color_user ffd787
-set fish_color_host 0087d7
+# name: clearance
+# ---------------
+# Based on idan. Display the following bits on the left:
+# - Virtualenv name (if applicable, see https://github.com/adambrenecki/virtualfish)
+# - Current directory name
+# - Git branch and dirty state (if inside a git repo)
 
-function fish_prompt --description 'Write out the prompt'
-	
-	set -l last_status $status
+function _git_branch_name
+  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+end
 
-	# Just calculate these once, to save a few cycles when displaying the prompt
-	if not set -q __fish_prompt_hostname
-		set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
-	end
+function _git_is_dirty
+  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+end
 
-	if not set -q __fish_prompt_normal
-		set -g __fish_prompt_normal (set_color normal)
-	end
+function fish_prompt
+  set -l last_status $status
 
-	set -l delim '>'
+  set -l cyan (set_color cyan)
+  set -l yellow (set_color yellow)
+  set -l red (set_color red)
+  set -l blue (set_color blue)
+  set -l green (set_color green)
+  set -l normal (set_color normal)
 
-	switch $USER
+  set -l cwd $blue(pwd | sed "s:^$HOME:~:")
 
-	case root
+  # Output the prompt, left to right
 
-		if not set -q __fish_prompt_cwd
-			if set -q fish_color_cwd_root
-				set -g __fish_prompt_cwd (set_color $fish_color_cwd_root)
-			else
-				set -g __fish_prompt_cwd (set_color $fish_color_cwd)
-			end
-		end
+  # Add a newline before new prompts
+  echo -e ''
 
-	case '*'
-
-		if not set -q __fish_prompt_cwd
-			set -g __fish_prompt_cwd (set_color $fish_color_cwd)
-		end
-
-	end
-
-	set -l prompt_status
-	if test $last_status -ne 0
-		if not set -q __fish_prompt_status
-			set -g __fish_prompt_status (set_color $fish_color_status)
-		end
-		set prompt_status "$__fish_prompt_status [$last_status]$__fish_prompt_normal"
-	end
-
-	if not set -q __fish_prompt_user
-		set -g __fish_prompt_user (set_color $fish_color_user)
-	end
-	if not set -q __fish_prompt_host
-		set -g __fish_prompt_host (set_color $fish_color_host)
-	end
-
-	echo -n -s "$__fish_prompt_user" "$USER" "$__fish_prompt_normal" @ "$__fish_prompt_host" "$__fish_prompt_hostname" "$__fish_prompt_normal" ' ' "$__fish_prompt_cwd" (pwd) 
-  echo -n -s (set_color brown) (__fish_git_prompt) (set_color normal)
-
+  # Display [venvname] if in a virtualenv
   if set -q VIRTUAL_ENV
-    echo -n -s (set_color red) " [" (basename "$VIRTUAL_ENV") "]" (set_color normal) " "
+      echo -n -s (set_color -b cyan black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
   end
 
-  echo -n -s "$__fish_prompt_normal" "$prompt_status" 
-  echo
-  echo "$delim" ''
+  # Print pwd or full path
+  echo -n -s $cwd $normal
+
+  # Show git branch and status
+  if [ (_git_branch_name) ]
+    set -l git_branch (_git_branch_name)
+
+    if [ (_git_is_dirty) ]
+      set git_info '(' $yellow $git_branch "±" $normal ')'
+    else
+      set git_info '(' $green $git_branch $normal ')'
+    end
+    echo -n -s ' · ' $git_info $normal
+  end
+
+  set -l prompt_color $red
+  if test $last_status = 0
+    set prompt_color $normal
+  end
+
+  # Terminate with a nice prompt char
+  echo -e ''
+  echo -e -n -s $prompt_color '⟩ ' $normal
 end
