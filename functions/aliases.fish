@@ -14,6 +14,7 @@ alias l='ls -CF'
 ################################
 ###  File ShortCut
 ################################
+alias a="cd /data/apps"
 alias D="cd /data/Downloads"
 alias d="cd /data/Dropbox"
 alias m="cd /data/repos/manhtai"
@@ -32,6 +33,9 @@ alias mut="cd /data/Downloads ; mutt"
 ################################
 # t
 alias t="python /data/apps/t/t.py --task-dir /data/Dropbox/Docs/Tasks --list tasks"
+
+# qo
+alias qo="python /data/repos/manhtai/gh-qo/qo.py"
 
 # tmux shortcut
 alias tk="tmux kill-session"
