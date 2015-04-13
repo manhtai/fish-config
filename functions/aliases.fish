@@ -24,6 +24,7 @@ alias g="git"
 alias ef="vim ~/.config/fish/functions/aliases.fish"
 alias ev="vim ~/.vim/vimrc"
 alias et="vim ~/.tmux.conf"
+alias eq="vim /data/repos/manhtai/gh-qo/quotes"
 
 # mutt
 alias mut="cd /data/Downloads ; mutt"
