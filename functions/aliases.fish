@@ -16,7 +16,7 @@ alias l='ls -CF'
 ################################
 alias D="cd /data/Downloads"
 alias d="cd /data/Dropbox"
-alias p="cd /data/repos/dshs"
+alias m="cd /data/repos/manhtai"
 alias g="git"
 
 # vim somethings
@@ -30,9 +30,10 @@ alias mut="cd /data/Downloads ; mutt"
 ################################
 ###  Program ShortCut
 ################################
+# t
+alias t="python /data/apps/t/t.py --task-dir /data/Dropbox/Docs/Tasks --list tasks"
 
 # tmux shortcut
-alias t="tmux"
 alias tk="tmux kill-session"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
