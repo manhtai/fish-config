@@ -24,7 +24,6 @@ alias g="git"
 alias ef="vim ~/.config/fish/functions/aliases.fish"
 alias ev="vim ~/.vim/vimrc"
 alias et="vim ~/.tmux.conf"
-alias eq="vim /data/repos/manhtai/gh-qo/quotes"
 
 # mutt
 alias mut="cd /data/Downloads ; mutt"
@@ -36,7 +35,7 @@ alias mut="cd /data/Downloads ; mutt"
 alias t="python /data/apps/t/t.py --task-dir /data/Dropbox/Docs/Tasks --list tasks"
 
 # qo
-alias qo="python /data/repos/manhtai/gh-qo/qo.py"
+alias qo="python /data/repos/manhtai/gh-qo/qo.py -d /data/repos/manhtai/gh-qo"
 
 # tmux shortcut
 alias tk="tmux kill-session"
