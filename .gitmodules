@@ -1,0 +1,12 @@
+[submodule "virtualfish"]
+	path = plugins/virtualfish
+	url = https://github.com/adambrenecki/virtualfish.git
+[submodule "plugins/qo"]
+	path = plugins/qo
+	url = https://github.com/manhtai/qo.git
+[submodule "plugins/t"]
+	path = plugins/t
+	url = https://github.com/sjl/t.git
+[submodule "plugins/virtualfish"]
+	path = plugins/virtualfish
+	url = https://github.com/adambrenecki/virtualfish.git

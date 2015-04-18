@@ -1,3 +1,6 @@
+################################
+###  UNIX commands
+################################
 alias ..="cd .."
 alias ...="cd ../.."
 alias -="cd -"
@@ -12,7 +15,7 @@ alias ll='ls -ahlF'
 alias l='ls -CF'
 
 ################################
-###  File ShortCut
+###  Folders
 ################################
 alias a="cd /data/apps"
 alias D="cd /data/Downloads"
@@ -20,6 +23,17 @@ alias d="cd /data/Dropbox"
 alias m="cd /data/repos/manhtai"
 alias g="git"
 
+################################
+###  Plugins
+################################
+# t
+alias t="python ~/.config/fish/plugins/t/t.py --task-dir /data/Dropbox/Docs/Tasks --list tasks"
+# qo
+alias qo="python ~/.config/fish/plugins/qo/qo.py -d /data/Dropbox/Docs/Quotes"
+
+################################
+###  Programs
+################################
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
 alias ev="vim ~/.vim/vimrc"
@@ -27,15 +41,6 @@ alias et="vim ~/.tmux.conf"
 
 # mutt
 alias mut="cd /data/Downloads ; mutt"
-
-################################
-###  Program ShortCut
-################################
-# t
-alias t="python /data/apps/t/t.py --task-dir /data/Dropbox/Docs/Tasks --list tasks"
-
-# qo
-alias qo="python /data/repos/manhtai/gh-qo/qo.py -d /data/repos/manhtai/gh-qo"
 
 # tmux shortcut
 alias tk="tmux kill-session"
@@ -63,6 +68,7 @@ alias gba="git branch -a"
 alias gcp="git cherry-pick"
 alias gl="git lg"
 alias gpom="git pull origin master"
+
 # turn on coloring on grep
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
