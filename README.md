@@ -1,10 +1,19 @@
-# Configuration for fish!
-
+# My configuration for fish
 
 ## Make fish default shell
 
 `chsh -s /usr/bin/fish`
 
-## Config path
+## Clone my repo
 
-`~/.config/fish`
+```bash
+git clone https://github.com/manhtai/fish-config.git ~/.config/fish
+cd ~/.config/fish
+```
+
+## Install plugins
+
+```bash
+git submodule init
+git submodule update
+```
