@@ -21,6 +21,7 @@ alias a="cd /data/apps"
 alias D="cd /data/Downloads"
 alias d="cd /data/Dropbox"
 alias m="cd /data/repos/manhtai"
+alias p="cd /data/repos/projects"
 alias g="git"
 
 ################################

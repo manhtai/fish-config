@@ -6,6 +6,7 @@
 . "$HOME/.config/fish/functions/fish_prompt.fish"   # colorful
 . "$HOME/.config/fish/functions/fish_greeting.fish" # qo
 # virtualenv in fish
+set VIRTUALFISH_HOME /data/repos/projects
 set -g VIRTUALFISH_COMPAT_ALIASES
 . "$HOME/.config/fish/plugins/virtualfish/virtualfish/virtual.fish"
 . "$HOME/.config/fish/plugins/virtualfish/virtualfish/auto_activation.fish"
