@@ -81,6 +81,7 @@ alias sau="sudo apt-get update"
 alias sap="sudo apt-get upgrade"
 alias sar="sudo apt-get remove"
 alias saa="sudo apt-get autoremove"
+alias sac="sudo apt-get autoclean"
 
 # Quick check running state of a process
 alias psef="ps -ef | grep "
