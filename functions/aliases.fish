@@ -22,7 +22,6 @@ alias D="cd /data/Downloads"
 alias d="cd /data/Dropbox"
 alias m="cd /data/repos/manhtai"
 alias p="cd /data/repos/projects"
-alias g="git"
 
 ################################
 ###  Plugins
@@ -37,6 +36,7 @@ alias qo="python ~/.config/fish/plugins/qo/qo.py -d /data/Dropbox/Docs/Quotes"
 ################################
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
+alias sf=". ~/.config/fish/config.fish"
 alias ev="vim ~/.vim/vimrc"
 alias et="vim ~/.tmux.conf"
 
@@ -50,6 +50,7 @@ alias ta="tmux attach -t"
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"
+alias g="git"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias ga="git add -A"
@@ -84,6 +85,5 @@ alias saa="sudo apt-get autoremove"
 alias sac="sudo apt-get autoclean"
 
 # Quick check running state of a process
+alias psa="ps -A"
 alias psef="ps -ef | grep "
-alias top="top -o cpu"
-
