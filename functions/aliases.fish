@@ -40,9 +40,9 @@ alias p2up="sudo -H pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xarg
 alias p3up="sudo -H pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H pip3 install -U"
 # install and uninstall
 alias p2in="sudo -H pip2 install"
-alias p2un="sudo pip2 uninstall"
+alias p2un="sudo -H pip2 uninstall"
 alias p3in="sudo -H pip3 install"
-alias p3un="sudo pip3 uninstall"
+alias p3un="sudo -H pip3 uninstall"
 
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
