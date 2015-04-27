@@ -34,11 +34,22 @@ alias qo="python ~/.config/fish/plugins/qo/qo.py -d /data/Dropbox/Docs/Quotes"
 ################################
 ###  Programs
 ################################
+# pip something
+# upgrade all packages
+alias p2up="sudo -H pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H pip2 install -U"
+alias p3up="sudo -H pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo -H pip3 install -U"
+# install and uninstall
+alias p2in="sudo -H pip2 install"
+alias p2un="sudo pip2 uninstall"
+alias p3in="sudo -H pip3 install"
+alias p3un="sudo pip3 uninstall"
+
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
 alias sf=". ~/.config/fish/config.fish"
 alias ev="vim ~/.vim/vimrc"
 alias et="vim ~/.tmux.conf"
+alias eg="vim ~/.gitconfig"
 
 # mutt
 alias mut="cd /data/Downloads ; mutt"
@@ -47,6 +58,9 @@ alias mut="cd /data/Downloads ; mutt"
 alias tk="tmux kill-session"
 alias tl="tmux list-sessions"
 alias ta="tmux attach -t"
+alias tcp="fish /data/repos/manhtai/course-cp/python/tmux"
+alias tal="fish /data/repos/manhtai/course-algo/python/tmux"
+alias tsi="fish /data/repos/manhtai/course-sicp/exercises/tmux"
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"
@@ -83,6 +97,7 @@ alias sap="sudo apt-get upgrade"
 alias sar="sudo apt-get remove"
 alias saa="sudo apt-get autoremove"
 alias sac="sudo apt-get autoclean"
+alias spp="sudo add-apt-repository"
 
 # Quick check running state of a process
 alias psa="ps -A"
