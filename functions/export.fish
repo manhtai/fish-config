@@ -23,3 +23,5 @@ setenv -x LESS_TERMCAP_us (set_color -o green)
 
 # grep colors
 setenv -x GREP_OPTIONS "--color=auto"
+
+set -x GTK_MODULES ""

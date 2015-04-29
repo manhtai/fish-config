@@ -99,6 +99,6 @@ alias saa="sudo apt-get autoremove"
 alias sac="sudo apt-get autoclean"
 alias spp="sudo add-apt-repository"
 
-# Quick check running state of a process
-alias psa="ps -A"
+# quick check running state of a process
 alias psef="ps -ef | grep "
+
