@@ -57,7 +57,7 @@ function fish_prompt
 
   # Show number of undone list
   if test (t | wc -l) -ne 0
-    set tlist '[' (set_color red) (t | wc -l) (set_color normal) ']'
+    set tlist '[' $red (t | wc -l) $prompt_color ']'
   end
   # Terminate with a nice prompt char
   echo -e ''

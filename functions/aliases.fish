@@ -44,6 +44,11 @@ alias p2un="sudo -H pip2 uninstall"
 alias p3in="sudo -H pip3 install"
 alias p3un="sudo -H pip3 uninstall"
 
+# python3
+alias p3mr="python3 manage.py runserver"
+alias p3mt="python3 manage.py test"
+alias p3ft="python3 functional_tests.py"
+
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
 alias sf=". ~/.config/fish/config.fish"
@@ -61,6 +66,7 @@ alias ta="tmux attach -t"
 alias tcp="fish /data/repos/manhtai/course-cp/python/tmux"
 alias tal="fish /data/repos/manhtai/course-algo/python/tmux"
 alias tsi="fish /data/repos/manhtai/course-sicp/exercises/tmux"
+alias tdd="fish /data/repos/manhtai/course-web/tdd_me/tmux.sh"
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"
