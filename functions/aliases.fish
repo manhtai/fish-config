@@ -51,6 +51,7 @@ alias p3ft="python3 functional_tests.py"
 
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
+alias eh="vim ~/.config/fish/fish_history"
 alias sf=". ~/.config/fish/config.fish"
 alias ev="vim ~/.vim/vimrc"
 alias et="vim ~/.tmux.conf"
