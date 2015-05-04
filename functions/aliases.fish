@@ -5,23 +5,25 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias -="cd -"
 alias q="exit"
+alias shut="sudo shutdown -h 00"
 
-alias la="ls -Gla"
-
-# List only directories
+# list only directories
 alias lsd='ls -l | grep "^d"'
-
+alias la="ls -Gla"
 alias ll='ls -ahlF'
 alias l='ls -CF'
+# quick check running state of a process
+alias psef="ps -ef | grep "
 
 ################################
 ###  Folders
 ################################
+alias f="cd ~/.config/fish/functions"
+alias v="cd ~/.vim"
 alias a="cd /data/apps"
 alias D="cd /data/Downloads"
 alias d="cd /data/Dropbox"
 alias m="cd /data/repos/manhtai"
-alias p="cd /data/repos/projects"
 
 ################################
 ###  Plugins
@@ -51,10 +53,8 @@ alias p3ft="python3 functional_tests.py"
 
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
-alias eh="vim ~/.config/fish/fish_history"
 alias sf=". ~/.config/fish/config.fish"
 alias ev="vim ~/.vim/vimrc"
-alias et="vim ~/.tmux.conf"
 alias eg="vim ~/.gitconfig"
 
 # mutt
@@ -105,7 +105,3 @@ alias sar="sudo apt-get remove"
 alias saa="sudo apt-get autoremove"
 alias sac="sudo apt-get autoclean"
 alias spp="sudo add-apt-repository"
-
-# quick check running state of a process
-alias psef="ps -ef | grep "
-

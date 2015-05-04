@@ -24,4 +24,8 @@ setenv -x LESS_TERMCAP_us (set_color -o green)
 # grep colors
 setenv -x GREP_OPTIONS "--color=auto"
 
+# I don't know how to remove it
 set -x GTK_MODULES ""
+
+# GAE
+set -x PATH "/data/apps/google_appengine" $PATH
