@@ -56,7 +56,7 @@ alias p3ms="python3 manage.py startapp"
 
 alias p3mr="python3 manage.py runserver"
 alias p3mt="python3 manage.py test"
-alias p3ft="python3 functional_tests.py"
+alias p3mtf="python3 manage.py test functional_tests"
 
 alias p3dist='/usr/local/lib/python3.4/dist-packages/'
 
