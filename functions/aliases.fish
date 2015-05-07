@@ -32,7 +32,7 @@ alias w="cd /data/repos/manhtai/course-web"
 # t
 alias t="python ~/.config/fish/plugins/t/t.py --task-dir /data/Dropbox/Docs/Tasks --list tasks"
 # qo
-alias qo="python ~/.config/fish/plugins/qo/qo.py -d /data/Dropbox/Docs/Quotes"
+alias qo="python ~/.config/fish/plugins/qo/qo.py -d /data/Dropbox/Docs/Quotes -n"
 
 ################################
 ###  Programs
