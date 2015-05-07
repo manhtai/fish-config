@@ -24,6 +24,7 @@ alias a="cd /data/apps"
 alias D="cd /data/Downloads"
 alias d="cd /data/Dropbox"
 alias m="cd /data/repos/manhtai"
+alias w="cd /data/repos/manhtai/course-web"
 
 ################################
 ###  Plugins
@@ -47,9 +48,17 @@ alias p3in="sudo -H pip3 install"
 alias p3un="sudo -H pip3 uninstall"
 
 # python3
+alias p3mma="python3 manage.py makemigrations"
+alias p3mmi="python3 manage.py migrate"
+alias p3msh="python3 manage.py shell"
+
+alias p3ms="python3 manage.py startapp"
+
 alias p3mr="python3 manage.py runserver"
 alias p3mt="python3 manage.py test"
 alias p3ft="python3 functional_tests.py"
+
+alias p3dist='/usr/local/lib/python3.4/dist-packages/'
 
 # vim somethings
 alias ef="vim ~/.config/fish/functions/aliases.fish"
@@ -68,6 +77,7 @@ alias tcp="fish /data/repos/manhtai/course-cp/python/tmux"
 alias tal="fish /data/repos/manhtai/course-algo/python/tmux"
 alias tsi="fish /data/repos/manhtai/course-sicp/exercises/tmux"
 alias tdd="fish /data/repos/manhtai/course-web/tdd_me/tmux.sh"
+alias twe="fish /data/repos/manhtai/course-web/cs253_hw/tmux.sh"
 
 # git related shortcut
 alias undopush="git push -f origin HEAD^:master"

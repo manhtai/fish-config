@@ -1,6 +1,6 @@
 [submodule "plugins/qo"]
 	path = plugins/qo
-	url = https://github.com/manhtai/qo.git
+	url = git@github.com:manhtai/qo.git
 [submodule "plugins/t"]
 	path = plugins/t
 	url = https://github.com/sjl/t.git
