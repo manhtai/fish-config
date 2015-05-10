@@ -3,7 +3,7 @@
 	url = git@github.com:manhtai/qo.git
 [submodule "plugins/t"]
 	path = plugins/t
-	url = https://github.com/sjl/t.git
+	url = git@github.com:hochanh/t.git
 [submodule "plugins/virtualfish"]
 	path = plugins/virtualfish
 	url = https://github.com/adambrenecki/virtualfish.git

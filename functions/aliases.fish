@@ -32,7 +32,7 @@ alias w="cd /data/repos/manhtai/course-web"
 # t
 alias t="python ~/.config/fish/plugins/t/t.py --task-dir /data/Dropbox/Docs/Tasks --list tasks"
 # qo
-alias qo="python ~/.config/fish/plugins/qo/qo.py -d /data/Dropbox/Docs/Quotes -n"
+alias qo="python ~/.config/fish/plugins/qo/qo.py -d /data/Dropbox/Docs/Quotes"
 
 ################################
 ###  Programs
@@ -47,7 +47,9 @@ alias p2un="sudo -H pip2 uninstall"
 alias p3in="sudo -H pip3 install"
 alias p3un="sudo -H pip3 uninstall"
 
-# python3
+# python3 manage.py
+alias p3m="python3 manage.py"
+
 alias p3mma="python3 manage.py makemigrations"
 alias p3mmi="python3 manage.py migrate"
 alias p3msh="python3 manage.py shell"
