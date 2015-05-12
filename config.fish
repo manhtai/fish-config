@@ -5,6 +5,8 @@
 . "$HOME/.config/fish/functions/z.fish"             # frequent folders
 . "$HOME/.config/fish/functions/fish_prompt.fish"   # colorful
 . "$HOME/.config/fish/functions/fish_greeting.fish" # qo
+. "$HOME/.config/fish/functions/vf.fish"            # vf
+
 # virtualenv in fish
 set -g VIRTUALFISH_COMPAT_ALIASES
 . "$HOME/.config/fish/plugins/virtualfish/virtualfish/virtual.fish"

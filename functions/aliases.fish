@@ -24,6 +24,7 @@ alias a="cd /data/apps"
 alias D="cd /data/Downloads"
 alias d="cd /data/Dropbox"
 alias m="cd /data/repos/manhtai"
+alias p="cd /data/projects"
 alias w="cd /data/repos/manhtai/course-web"
 
 ################################
@@ -58,14 +59,18 @@ alias p3ms="python3 manage.py startapp"
 
 alias p3mr="python3 manage.py runserver"
 alias p3mt="python3 manage.py test"
-alias p3mtf="python3 manage.py test functional_tests"
 
 alias p3dist='/usr/local/lib/python3.4/dist-packages/'
 
 # vim somethings
-alias ef="vim ~/.config/fish/functions/aliases.fish"
-alias sf=". ~/.config/fish/config.fish"
+alias efc="vim ~/.config/fish/config.fish"
+alias efa="vim ~/.config/fish/functions/aliases.fish"
+alias efe="vim ~/.config/fish/functions/export.fish"
+alias efv="vim ~/.config/fish/functions/vf.fish"
+alias efs="source ~/.config/fish/config.fish"
+
 alias ev="vim ~/.vim/vimrc"
+alias em="vim ~/.mutt/muttrc"
 alias eg="vim ~/.gitconfig"
 
 # mutt
@@ -94,6 +99,7 @@ alias gst="git status -sb --ignore-submodules"
 alias gm="git merge --no-ff"
 alias gpt="git push --tags"
 alias gp="git push"
+alias gphe="git push heroku master"
 alias grs="git reset --soft"
 alias gra="git remote add origin"
 alias grh="git reset --hard"
@@ -117,3 +123,6 @@ alias sar="sudo apt-get remove"
 alias saa="sudo apt-get autoremove"
 alias sac="sudo apt-get autoclean"
 alias spp="sudo add-apt-repository"
+
+# tree
+alias tree="tree -I __pycache__"
