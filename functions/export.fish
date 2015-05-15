@@ -29,6 +29,3 @@ set -x GTK_MODULES ""
 
 # GAE
 set -x PATH "/data/apps/google_appengine" $PATH
-
-# Postgres
-set -x DATABASE_URL "postgres://testadmin:testing@localhost/django_testdb"
