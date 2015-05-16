@@ -1,6 +1,3 @@
-[submodule "plugins/qo"]
-	path = plugins/qo
-	url = git@github.com:manhtai/qo.git
 [submodule "plugins/t"]
 	path = plugins/t
 	url = git@github.com:hochanh/t.git

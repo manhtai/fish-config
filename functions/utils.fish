@@ -31,7 +31,7 @@ alias myip="curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'"
 ###  Unix Related
 ################################
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+alias cb="tr -d '\n' | pbcopy"
 
 # File size
 alias fs="stat -f \"%z bytes\""

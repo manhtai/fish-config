@@ -4,11 +4,16 @@ set -e fish_greeting
 
 function fish_greeting
     echo ""
-    set qo (qo)
-    set -l textcol red
+    set -l file "functions/fish_greeting.quotes"
+    set -l lines (wc -l $file | cut -d ' ' -f1)
+    set -l zone (date +%z | sed 's/[+|0]//g')
+    set -l days (math (math (date +%s) / 60 / 60 + $zone) / 24)
+    set -l line (math $days \% $lines)
+    set -l quote (sed $line'!d' $file)
+    set -l content red
     set -l author  cyan
-    set_color $textcol -b normal
-    echo -e -s $qo | cut -d '|' -f1 | sed 's/^/  /'
-    set_color $author -b normal 
-    echo -s $qo | cut -d '|' -f2 | sed 's/^/  -/'
+    set_color $content
+    echo -e -s $quote | cut -d '|' -f1 | sed 's/^/  /'
+    set_color $author
+    echo -s $quote | cut -d '|' -f2 | sed 's/^/  ~/'
 end

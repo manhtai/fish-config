@@ -18,13 +18,14 @@ alias psef="ps -ef | grep "
 ################################
 ###  Folders
 ################################
-alias f="cd ~/.config/fish/functions"
+alias f="cd ~/.config/fish"
 alias v="cd ~/.vim"
+alias m="cd ~/.mutt"
 alias a="cd /data/apps"
 alias D="cd /data/Downloads"
 alias d="cd /data/Dropbox"
-alias m="cd /data/repos/manhtai"
-alias p="cd /data/projects"
+alias c="cd /data/repos/courses"
+alias p="cd /data/repos/projects"
 alias w="cd /data/repos/manhtai/course-web"
 
 ################################
