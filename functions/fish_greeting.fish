@@ -4,7 +4,7 @@ set -e fish_greeting
 
 function fish_greeting
     echo ""
-    set -l file "functions/fish_greeting.quotes"
+    set -l file "$HOME/.config/fish/functions/fish_greeting.quotes"
     set -l lines (wc -l $file | cut -d ' ' -f1)
     set -l zone (math (date +%z | sed 's/+//g') / 100)
     set -l days (math (math (date +%s) / 60 / 60 + $zone) / 24)
