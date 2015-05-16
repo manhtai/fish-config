@@ -6,7 +6,7 @@ function fish_greeting
     echo ""
     set -l file "functions/fish_greeting.quotes"
     set -l lines (wc -l $file | cut -d ' ' -f1)
-    set -l zone (date +%z | sed 's/[+|0]//g')
+    set -l zone (math (date +%z | sed 's/+//g') / 100)
     set -l days (math (math (date +%s) / 60 / 60 + $zone) / 24)
     set -l line (math $days \% $lines)
     set -l quote (sed $line'!d' $file)
